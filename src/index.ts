@@ -1,3 +1,4 @@
-import App from "~/App";
+import http from 'http'
+import { app } from './server'
 
-App();
+http.createServer(app).listen(8080)

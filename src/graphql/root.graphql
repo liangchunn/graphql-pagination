@@ -1,0 +1,19 @@
+type Query {
+  messages(cursor: String, limit: Int): MessageConnection!
+}
+
+type MessageConnection {
+  edges: [Message!]!
+  pageInfo: PageInfo!
+}
+
+type Message {
+  id: ID!
+  createdAt: String!
+  content: String!
+}
+
+type PageInfo {
+  hasNextPage: Boolean!
+  endCursor: String!
+}

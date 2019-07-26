@@ -1,5 +1,5 @@
 {
-  "name": "gql-test",
+  "name": "graphql-pagination",
   "version": "0.1.0",
   "main": "src/index.ts",
   "private": true,
@@ -7,13 +7,28 @@
     "test": "typescript-node-scripts test",
     "start": "typescript-node-scripts start",
     "build": "typescript-node-scripts build",
-    "lint": "tslint --project ."
+    "lint": "tslint --project .",
+    "codegen": "graphql-codegen --config codegen.yml"
   },
   "devDependencies": {
+    "@graphql-codegen/cli": "^1.4.0",
+    "@graphql-codegen/typescript": "1.4.0",
+    "@graphql-codegen/typescript-resolvers": "^1.4.0",
+    "@types/express": "^4.17.0",
+    "@types/graphql": "^14.2.3",
     "@types/jest": "^24.0.15",
+    "@types/lodash": "^4.14.136",
     "@types/node": "^12.6.8",
+    "graphql-tag": "^2.10.1",
     "tslint": "^5.18.0",
+    "tslint-config-prettier": "^1.18.0",
     "typescript": "^3.5.3",
     "typescript-node-scripts": "^2.0.6"
+  },
+  "dependencies": {
+    "apollo-server-express": "^2.7.1",
+    "express": "^4.17.1",
+    "graphql": "^14.4.2",
+    "lodash": "^4.17.15"
   }
 }
